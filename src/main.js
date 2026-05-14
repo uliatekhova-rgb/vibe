@@ -1,6 +1,25 @@
 // Простой пример "нестандартного элемента": переключатель темы.
 // TODO студент: замени или дополни своим.
 
+const text = "Booting CV profile... C++ student detected... loading skills...";
+
+const el = document.querySelector(".cv__terminal-text");
+
+let i = 0;
+
+function type() {
+  if (!el) return;
+
+  el.textContent = text.slice(0, i);
+  i++;
+
+  if (i <= text.length) {
+    setTimeout(type, 60);
+  }
+}
+
+type();
+
 const STORAGE_KEY = 'cv-theme';
 
 const getInitialTheme = () => {

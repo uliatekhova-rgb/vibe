@@ -125,3 +125,25 @@ article h3 {
   padding: 0.3rem 0.7rem;
   font-size: 0.9rem;
 }
+.cv__terminal {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.cv__terminal-text::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
